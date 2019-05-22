@@ -12,8 +12,26 @@ monaco = Cocktail.create(name:"monaco")
 banana = Ingredient.create(name:"banana")
 chocolate = Ingredient.create(name:"chocolate")
 
-dose = Dose.create(description: "description")
+mojito_banana = Dose.new(description: "1")
+mojito_chocolate = Dose.new(description: "2")
 
-dose.cocktail_id = mojito.id
-dose.ingredient_id = banana.id
+monaco_banana = Dose.new(description: "2")
+monaco_chocolate = Dose.new(description: "3")
 
+mojito_banana.cocktail_id =  mojito.id
+mojito_chocolate.cocktail_id =  mojito.id
+
+monaco_banana.cocktail_id =  monaco.id
+monaco_chocolate.cocktail_id =  monaco.id
+
+mojito_banana.ingredient_id =  banana.id
+mojito_chocolate.ingredient_id =  chocolate.id
+
+monaco_banana.ingredient_id =  banana.id
+monaco_chocolate.ingredient_id =  chocolate.id
+
+mojito_banana.save
+mojito_chocolate.save
+
+monaco_banana.save
+monaco_chocolate.save
