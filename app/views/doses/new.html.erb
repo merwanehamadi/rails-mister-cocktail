@@ -1,4 +1,4 @@
-<%= simple_form_for(@cocktail) do |f| %>
+<%= simple_form_for(@cocktail, url: cocktail_doses_path(@cocktail), method: :post) do |f| %>
 <%= f.input :name %>
 <%= f.association :ingredients %>
 <%= f.submit %>

@@ -3,3 +3,4 @@
 <% @cocktail.doses.each do |dose|%>
 <%= dose.description %> <%= dose.ingredient.name %>
 <% end %>
+<%= image_tag @cocktail.photo.url(:bright_face) %>

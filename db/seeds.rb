@@ -6,8 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-mojito = Cocktail.create(name:"mojito")
-monaco = Cocktail.create(name:"monaco")
+mojito = Cocktail.new(name:"mojito")
+monaco = Cocktail.new(name:"monaco")
+url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
+mojito.remote_photo_url = url
+monaco.remote_photo_url = url
+mojito.save
+monaco.save
 
 banana = Ingredient.create(name:"banana")
 chocolate = Ingredient.create(name:"chocolate")
